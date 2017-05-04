@@ -51,3 +51,7 @@ plt.title('Truth or Bluff (Poly Regression Model)')
 plt.xlabel('Position level')
 plt.ylabel('Salary')
 plt.show()
+
+Lin_reg.predict(6.5)
+
+Lin_reg2.predict(poly_reg.fit_transform(6.5))
