@@ -26,3 +26,16 @@ regressor = lm(formula = Profit ~ .,
 
 # Predicting the Test set results
 y_pred = predict(regressor, newdata = test_set)
+
+# backward elim
+regressor = lm(formula = Profit ~ R.D.Spend+Administration+Marketing.Spend+State,
+               data = training_set)
+# remove state
+regressor = lm(formula = Profit ~ R.D.Spend+Administration+Marketing.Spend,
+               data = training_set)
+#remove admin
+regressor = lm(formula = Profit ~ R.D.Spend+Marketing.Spend,
+               data = training_set)
+#remove marketing
+regressor = lm(formula = Profit ~ R.D.Spend,
+               data = training_set)
