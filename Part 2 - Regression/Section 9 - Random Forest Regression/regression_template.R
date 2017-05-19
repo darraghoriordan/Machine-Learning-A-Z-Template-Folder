@@ -18,6 +18,11 @@ dataset = dataset[2:3]
 
 # Fitting the Regression Model to the dataset
 # Create your regressor here
+library(randomForest)
+set.seed(1234)
+regressor = randomForest(x = dataset[-2],
+                         y = dataset$Salary,
+                         ntree = 1000)
 
 # Predicting a new result
 y_pred = predict(regressor, data.frame(Level = 6.5))
