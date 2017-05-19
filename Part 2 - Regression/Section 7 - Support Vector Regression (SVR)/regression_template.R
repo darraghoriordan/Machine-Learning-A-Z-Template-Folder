@@ -18,6 +18,10 @@ dataset = dataset[2:3]
 
 # Fitting the Regression Model to the dataset
 # Create your regressor here
+library(e1071)
+regressor = svm(formula = Salary ~ .,
+                data = dataset,
+                type = 'eps-regression')
 
 # Predicting a new result
 y_pred = predict(regressor, data.frame(Level = 6.5))
