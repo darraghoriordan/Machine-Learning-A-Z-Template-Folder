@@ -43,4 +43,4 @@ y_pred = as.vector(y_pred)
 # Making the Confusion Matrix
 cm = table(test_set[, 11], y_pred)
 
-# h2o.shutdown()
+ #h2o.shutdown()
